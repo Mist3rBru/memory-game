@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/img/favicon.png">
+  <title>Jogo da Memória</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/selectize.default.css">
+</head>
+
+<body>
+  <header class="cabecalho">
+    <h1 class="cabecalho-titulo">
+      Jogo da Memória
+    </h1>
+    <section class="cabecalho-rodape">
+      <div class="cabecalho-jogadores">
+        Jogador(a)
+        <select class="jogadores" placeholder="Nome"></select>
+      </div>
+      <div class="cabecalho-dificuldade">
+        Dificuldade
+        <select class="dificuldade">
+					<option class="option">Fácil</option>
+					<option class="option" selected>Normal</option>
+					<option class="option">Díficil</option>
+				</select>
+      </div>
+      <div class="cabecalho-tipo">
+        Tipo
+        <select class="tipo">
+					<option class="option" selected>Slimes</option>
+					<option class="option">Dinos</option>
+					<option class="option">Números</option>
+          <option class="option">Teste</option>
+				</select>
+      </div>
+      <div class="cabecalho-movimentos">
+        Movimento(s)
+        <div class="movimentos">0</div>
+      </div>
+      <div class="cabecalho-cronometro">
+        Cronômetro
+        <div class="cronometro">
+          <span class="minutos">00</span>:<span class="segundos">00</span>:<span class="milisegundos">00</span>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <section id="como-jogar" class="modal">
+    <div class="modal-conteudo">
+      <h2 class="modal-titulo">Como Jogar:</h2>
+      <ul>
+        <li>Adicione o seu nome no campo "Jogador(a)";</li>
+        <li>O objetivo do joga é você encontrar todos os pares de cartas;</li>
+        <li>Ao clicar sobre uma carta, o cronometro começa;</li>
+        <li>Cada tentativa conta um movimento;</li>
+        <li>O jogo termina após todos os pares forem encontrados;</li>
+        <li>Ao terminar o jogo seus pontos serão salvos em um ranking dos 10 melhores;</li>
+        <li>Bom Jogo!</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="mesa">
+    <div class="carta"></div><div class="carta"></div><div class="carta"></div><div class="carta"></div><div class="carta"></div><div class="carta"></div><div class="carta"></div><div class="carta"></div>
+  </section>
+
+  <section class="botoes">
+    <div class="botao placar" title="Placar"><i class="material-icons">assignment</i></a></div>
+    <div class="botao reset" title="Reset"><i class="material-icons">restart_alt</i></div>
+    <div class="botao login" title="Login"><i class="material-icons">login</i></div>
+    <div class="botao idioma" title="Trocar Idioma"><a href="index_en.html"><i class="material-icons">language</i></a></div>
+  </section>
+
+  <table id="placar">
+    <thead>
+      <th>Pos</th>
+      <th>Jogador(a)</th>
+      <th>Dificuldade</th>
+      <th>Movimentos</th>
+      <th>Tempo</th>
+      <th>Pts</th>
+    </thead>
+    <tbody>
+      <tr><td class="posicao">0</td><td>Bot</td><td>Jogar</td><td>0</td><td>00:00:00</td><td class="pontuacao">10</td>
+      <tr><td class="posicao">0</td><td>Bot</td><td>Jogar</td><td>0</td><td>00:00:00</td><td class="pontuacao">20</td></tr>
+      <tr><td class="posicao">0</td><td>Bot</td><td>Jogar</td><td>0</td><td>00:00:00</td><td class="pontuacao">30</td></tr>
+      <tr><td class="posicao">0</td><td>Bot</td><td>Jogar</td><td>0</td><td>00:00:00</td><td class="pontuacao">40</td></tr>
+      <tr><td class="posicao">0</td><td>Bot</td><td>Jogar</td><td>0</td><td>00:00:00</td><td class="pontuacao">50</td></tr>
+      <tr><td class="posicao">0</td><td>Bot</td><td>Jogar</td><td>0</td><td>00:00:00</td><td class="pontuacao">60</td></tr>
+      <tr><td class="posicao">0</td><td>Bot</td><td>Jogar</td><td>0</td><td>00:00:00</td><td class="pontuacao">70</td></tr>
+      <tr><td class="posicao">0</td><td>Bot</td><td>Jogar</td><td>0</td><td>00:00:00</td><td class="pontuacao">80</td></tr>
+      <tr><td class="posicao">0</td><td>Bot</td><td>Jogar</td><td>0</td><td>00:00:00</td><td class="pontuacao">90</td></tr>
+      <tr><td class="posicao">0</td><td>Bot</td><td>Jogar</td><td>0</td><td>00:00:00</td><td class="pontuacao">100</td></tr>
+    </tbody>
+  </table>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="assets/js/selectize.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+
+</html>
